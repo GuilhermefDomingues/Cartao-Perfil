@@ -1,0 +1,262 @@
+/* Importa a fonte Poppins do Google Fonts com pesos 300, 400, 500 e 600 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Seletor universal para resetar estilos padrão e definir a fonte */
+* {
+  /* Zera margens padrão de todos os elementos */
+  margin: 0;
+  /* Zera paddings padrão de todos os elementos */
+  padding: 0;
+  /* Define que as dimensões incluem borda e padding */
+  box-sizing: border-box;
+  /* Aplica a fonte Poppins a todos os elementos */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estiliza o body da página */
+body {
+  /* Define a altura como 100% da tela */
+  height: 100vh;
+  /* Usa Flexbox para organizar o conteúdo */
+  display: flex;
+  /* Centraliza o conteúdo verticalmente */
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+  /* Define um fundo cinza claro */
+  background-color: #f4f4f4;
+}
+
+/* Define o contêiner do cartão de perfil */
+.profile-card {
+  /* Usa Flexbox para alinhar conteúdo */
+  display: flex;
+  /* Organiza os elementos em coluna */
+  flex-direction: column;
+  /* Centraliza os elementos filhos */
+  align-items: center;
+  /* Define largura máxima de 370px */
+  max-width: 370px;
+  /* Garante que ocupe 100% da largura disponível até o limite */
+  width: 100%;
+  /* Define fundo branco */
+  background: #fff;
+  /* Aplica bordas arredondadas de 24px */
+  border-radius: 24px;
+  /* Adiciona padding interno de 25px */
+  padding: 25px;
+  /* Aplica uma sombra suave */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  /* Define posição relativa para pseudo-elementos */
+  position: relative;
+}
+
+/* Aplica estilos ao cartão quando o mouse passa por cima */
+.profile-card:hover {
+  /* Move o cartão 10px para cima */
+  transform: translateY(-10px);
+  /* Aumenta a intensidade da sombra */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Cria um pseudo-elemento para o cabeçalho roxo do cartão */
+.profile-card::before {
+  /* Define conteúdo vazio para o pseudo-elemento */
+  content: "";
+  /* Posiciona absolutamente no topo do cartão */
+  position: absolute;
+  /* Define a posição no topo */
+  top: 0;
+  /* Define a posição à esquerda */
+  left: 0;
+  /* Define altura como 36% do cartão */
+  height: 36%;
+  /* Define largura total */
+  width: 100%;
+  /* Aplica bordas arredondadas apenas no topo */
+  border-radius: 24px 24px 0 0;
+  /* Define fundo azul */
+  background-color: #9316b9;
+}
+
+/* Estiliza o contêiner da imagem de perfil */
+.image {
+  /* Define posição relativa para alinhamento */
+  position: relative;
+  /* Define altura de 150px */
+  height: 150px;
+  /* Define largura de 150px */
+  width: 150px;
+  /* Torna o contêiner circular */
+  border-radius: 50%;
+  /* Define fundo azul */
+  background-color: #9316b9;
+  /* Adiciona padding de 3px */
+  padding: 3px;
+  /* Adiciona margem inferior de 10px */
+  margin-bottom: 10px;
+}
+
+/* Estiliza a imagem de perfil dentro do contêiner */
+.image .profile-img {
+  /* Define altura como 100% do contêiner */
+  height: 100%;
+  /* Define largura como 100% do contêiner */
+  width: 100%;
+  /* Ajusta a imagem para preencher sem distorcer */
+  object-fit: cover;
+  /* Mantém o formato circular */
+  border-radius: 50%;
+  /* Adiciona borda branca de 3px */
+  border: 3px solid #fff;
+}
+
+/* Organiza os textos do cartão (nome e profissão) */
+.profile-card .text-data {
+  /* Usa Flexbox para alinhar conteúdo */
+  display: flex;
+  /* Organiza os elementos em coluna */
+  flex-direction: column;
+  /* Centraliza os elementos filhos */
+  align-items: center;
+  /* Define cor do texto como cinza escuro */
+  color: #333;
+}
+
+/* Estiliza o nome no cartão */
+.text-data .name {
+  /* Define tamanho de fonte de 22px */
+  font-size: 22px;
+  /* Define peso de fonte médio */
+  font-weight: 500;
+}
+
+/* Estiliza a profissão no cartão */
+.text-data .job {
+  /* Define tamanho de fonte de 15px */
+  font-size: 15px;
+  /* Define peso de fonte leve */
+  font-weight: 400;
+}
+
+/* Organiza os botões de mídia social */
+.profile-card .media-buttons {
+  /* Usa Flexbox para alinhar botões */
+  display: flex;
+  /* Centraliza os botões verticalmente */
+  align-items: center;
+  /* Adiciona margem superior de 15px */
+  margin-top: 15px;
+}
+
+/* Estiliza cada link de mídia social */
+.media-buttons .link {
+  /* Usa Flexbox para centralizar o ícone */
+  display: flex;
+  /* Centraliza verticalmente o conteúdo */
+  align-items: center;
+  /* Centraliza horizontalmente o conteúdo */
+  justify-content: center;
+  /* Define cor do texto/ícone como branco */
+  color: #fff;
+  /* Define tamanho de fonte de 18px para ícones */
+  font-size: 18px;
+  /* Define altura de 34px */
+  height: 34px;
+  /* Define largura de 34px */
+  width: 34px;
+  /* Torna o link circular */
+  border-radius: 50%;
+  /* Adiciona margem horizontal de 8px entre links */
+  margin: 0 8px;
+  /* Define fundo azul */
+  background-color: #9316b9;
+  /* Remove sublinhado padrão dos links */
+  text-decoration: none;
+  /* [ADIÇÃO] Adiciona transição suave para efeitos de hover */
+  transition: transform 0.3s ease;
+}
+
+/* [ADIÇÃO] Aplica efeito de escala ao passar o mouse sobre o link */
+.media-buttons .link:hover {
+  /* Aumenta o tamanho em 10% */
+  transform: scale(1.1);
+}
+
+/* Organiza os botões de ação (ex.: Seguir, Mensagem) */
+.profile-card .buttons {
+  /* Usa Flexbox para alinhar botões */
+  display: flex;
+  /* Centraliza os botões verticalmente */
+  align-items: center;
+  /* Adiciona margem superior de 25px */
+  margin-top: 25px;
+}
+
+/* Estiliza cada botão de ação */
+.buttons .button {
+  /* Define cor do texto como branco */
+  color: #fff;
+  /* Define tamanho de fonte de 14px */
+  font-size: 14px;
+  /* Define peso de fonte leve */
+  font-weight: 400;
+  /* Remove borda padrão */
+  border: none;
+  /* Aplica bordas arredondadas de 24px */
+  border-radius: 24px;
+  /* Adiciona margem horizontal de 10px entre botões */
+  margin: 0 10px;
+  /* Define padding interno de 8px vertical e 24px horizontal */
+  padding: 8px 24px;
+  /* Define fundo azul */
+  background-color: #9316b9;
+  /* Muda o cursor para indicar clique */
+  cursor: pointer;
+  /* Aplica transição suave de 0,3s para todas as propriedades */
+  transition: all 0.3s ease;
+}
+
+/* Aplica efeito ao passar o mouse sobre o botão */
+.buttons .button:hover {
+  /* Escurece o fundo do botão */
+  background-color: #0e4bf1;
+}
+
+/* Organiza a seção de dados analíticos (ex.: seguidores, posts) */
+.profile-card .analytics {
+  /* Usa Flexbox para alinhar dados */
+  display: flex;
+  /* Centraliza os dados verticalmente */
+  align-items: center;
+  /* Adiciona margem superior de 25px */
+  margin-top: 25px;
+}
+
+/* Estiliza cada item analítico */
+.analytics .data {
+  /* Usa Flexbox para alinhar ícone e texto */
+  display: flex;
+  /* Centraliza o conteúdo verticalmente */
+  align-items: center;
+  /* Define cor do texto como cinza escuro */
+  color: #333;
+  /* Adiciona padding horizontal de 20px */
+  padding: 0 20px;
+  /* Adiciona borda cinza à direita */
+  border-right: 2px solid #e7e7e7;
+}
+
+/* Estiliza o ícone dentro dos itens analíticos */
+.data i {
+  /* Define tamanho de fonte de 18px para o ícone */
+  font-size: 18px;
+  /* Adiciona margem à direita de 6px */
+  margin-right: 6px;
+}
+
+/* Remove a borda do último item analítico */
+.data:last-child {
+  /* Remove a borda à direita */
+  border-right: none;
+}
